@@ -41,6 +41,16 @@ Grey dark 3: #999
   --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; // 1200px / 16px = 75em , since 1em = 16px according to the browser default size
+
+$bp-large: 68.75em; // 1100px / 16px = 68.75em , since 1em = 16px according to the browser default size
+
+$bp-medium: 56.25em; // 900px / 16px = 56.25em , since 1em = 16px according to the browser default size
+
+$bp-small: 37.5em; // 600px / 16px = 37.5em , since 1em = 16px according to the browser default size
+
+$bp-smallest: 31.25em; // 500px / 16px = 31.25em , since 1em = 16px according to the browser default size
+
 * {
   margin: 0;
   padding: 0;
@@ -56,6 +66,10 @@ html {
   box-sizing: border-box;
   //   Setting the global font size for our application
   font-size: 62.5%; // 1rem = 10px , 10px / 16px = 62.5% , since the browser default font size is 16px.
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
